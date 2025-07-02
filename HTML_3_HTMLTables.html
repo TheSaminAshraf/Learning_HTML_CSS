@@ -1,0 +1,148 @@
+<!--
+
+    Create a Table
+
+    We can create a table by using the <table></table> tags.
+    The table element will contain all of the tabular data we plan on displaying.
+
+    Table Rows
+
+    In many programs that use tables, the table is already predefined for you, meaning that it
+    contains the rows, columns, and cells that will hold data. In HTML, all of these components
+    must be created.
+    The first step in entering data into the table is to add rows using the table row element:
+    <tr></tr>
+
+    Table Data
+
+    Rows are not sufficient to add data to add data to a table. Each cell element must also be
+    defined. In HTML, you can add data using the table data element: <td></td>.
+
+    Table Headings
+
+    Table data does not make much sense without title to describe what the data represents.
+    To add title to rows and columns, you can use the table heading element: <th></th>.
+    The table heading element is used just like a table data element, except with a relevant
+    title. Just like table data, a table heading must be placed within a table row.
+    The scope attribute can take on of two values:
+    1. row - this value makes it clear that the heading is for a row.
+    2. col - this value makes it clear that the heading is for a column.
+
+    Table Borders
+
+    In older versions of HTML, a border could added to a table using the border attribute and
+    setting it equal to an integer. This integer would represent the thickness of the border.
+    The browser will likely still interpret your code correctly if you use the border attribute,
+    but that doesn't mean the attribute should be used.
+    We use CSS to add style to HTML documents, because it helps us to separate the structure of a
+    page from how it looks.
+
+    Spanning Columns
+
+    Data can span columns using the colspan attribute. The attribute accepts an integer (greater
+    than or equal to 1) to denote the number of columns it spans across.
+
+    Spanning Rows
+
+    Data can also span multiple rows using the rowspan attribute.
+    The rowspan attribute is used for data that spans multiple rows. It accepts an integer (greater
+    than or equal to 1) to denote the number of rows it spans across.
+
+    Table Body
+
+    Long tables can be sectioned off using the table body element: <tbody></tbody>
+    The tbody element should contain all of the table's data, excluding the table headings.
+
+    Table Head
+
+    When a table's body is sectioned off, it also makes sense to section off the table's column
+    headings using the <thead></thead> element.
+
+    Table Footer
+
+    The bottom part of a long table can also be sectioned off using the <tfoot></tfoot>.
+    Footers are often used to contain sums, differences, and other data results.
+
+    Styling with CSS
+
+    Tables, by default are very bland. They have no borders, the font color is black, and the
+    typeface is the same type used for other HTML elements.
+    CSS, or Cascading Style Sheets, is a language that web developers use to style the HTML content
+    on a web page. You can use CSS to style tables.
+
+    Review
+
+    1. The <table></table> element creates a table.
+    2. The <tr></tr> element adds rows to a table.
+    3. To add data to a row, you can use the <td></td> element.
+    4. Table headings clarify the meaning of data. Headings are added with the <th></th> element.
+    5. Table data can span columns using the colspan attribute.
+    6. Table data can span rows using the rowspan attribute.
+    7. Tables can be split into three main sections: a head, a body, and a footer.
+    8. A table's head is created with the <thead></thead> element.
+    9. A table's body is created with the <tbody></tbody> element.
+    10. A table's footer is created with the <tfoot></tfoot> element.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="navigation">
+        <li><img src="https://content.codecademy.com/courses/web-101/unit-9/htmlcss1-img_logo-shiptoit.png" height="20px;"></li>
+        <li class="active">Action List</li>
+        <li>Profiles</li>
+        <li>Settings</li>
+    </ul>
+    <div class="search">Search the table</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Number of Items to Ship</th>
+                <th>Next Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adam's Greenworks</td>
+                <td>14</td>
+                <td>Package Items</td>
+            </tr>
+            <tr>
+                <td>Davie's Burgers</td>
+                <td>2</td>
+                <td>Send Invoice</td>
+            </tr>
+            <tr>
+                <td>Baker's Bike Shop</td>
+                <td>3</td>
+                <td>Send Invoice</td>
+            </tr>
+            <tr>
+                <td>Miss Sally's Southern</td>
+                <td>4</td>
+                <td rowspan="2">Ship</td>
+            </tr>
+            <tr>
+                <td>Summit Resort Rentals</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Strike Fitness</td>
+                <td>1</td>
+                <td>Enter Order</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>Total</td>
+            <td>28</td>
+        </tfoot>
+    </table>
+</body>
+</html>
