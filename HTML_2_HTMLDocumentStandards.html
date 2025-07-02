@@ -1,0 +1,197 @@
+<!--
+
+    Preparing for HTML
+
+    HTML files require certain elements to set up the document properly. We can let web browsers
+    know that we are using HTML by starting our document with a document type declaration.
+    This declaration is an instruction, and it must be the first line of code in your HTML
+    document. It tells the browser what type of document to expect, along with what version of
+    HTML is being used in the document. For now, the browser will correctly assume that the
+    html in <!DOCTYPE html> is referring to HTML5, as it is the current standard.
+    In the future, however, a new standard will override HTML5. To make sure your document is
+    forever interpreted correctly, always include <!DOCTYPE html> at the very beginning of
+    your HTML documents.
+    Lastly, HTML code is always saved in a file with .html extension.
+
+    The <html></html> Tags
+
+    To create HTML structure and content, we must add opening and closing html tags after
+    declaring <!DOCTYPE html>
+    Anything between the opening <html> and the closing </html> tags will be interpreted as HTML
+    code. Without these tags, it is possible that browsers could incorrectly interpret your HTML
+    code.
+
+    The Head
+
+    We can give the browser some information about the page itself by adding a head element with
+    the <head></head> tags. It goes above the body element.
+    The head element contains the metadata for a web page. Metadata is information about the page
+    that isn’t displayed directly on the web page. Unlike the information inside of the body tag,
+    the metadata in the head is information about the page itself.
+
+    Page Titles
+
+    A browser's tab displays the title specified in the <title></title> tags. The <title></title>
+    tags are always inside of the head element.
+
+    Linking to Other Web Pages
+
+    One of the powerful aspects of HTML, is the ability to link to other web pages.
+    You can add links to a web pag by adding an anchor element using the <a></a> tags and
+    including the text of the link in between the opening and closing tags.
+    An anchor element is incomplete without the href attribute. This attribute stands for
+    hypertext reference and is used to link to a path, or the address to where a file is located
+    (whether it is on your computer or another location). The paths provided to the href attribute
+    are often URLs.
+    When reading technical documentation, you may come across the term hyperlink. These terms are
+    often used interchangeably.
+
+    Opening Links in a New Window
+
+    The target attribute of the anchor element specifies how a link should open.
+    It’s possible that one or more links on your web page link to an entirely different website.
+    In that case, you may want users to read the linked website, but hope that they return to
+    your web page. This is exactly when the target attribute is useful.
+    For a link to open in a new window, the target attribute requires a value of _blank. The target
+    attribute can be added directly to the opening tag of the anchor element, just like the href
+    attribute.
+    It’s likely that you are using a modern browser that opens up websites in new tabs, rather
+    than new windows. Before the advent of browsers with tabs, additional browser windows had
+    to be opened to view more websites. The target="_blank" attribute, when used in modern
+    browsers, will open new websites in a new tab.
+
+    Linking to Relative Page
+
+    Many sites also link to internal web pages like Home, About, and Contact.
+    Before we learn how to link between internal pages, let’s establish where our files are stored.
+    When making multi-page static websites, web developers often store HTML files in the root
+    directory, or a main folder where all the files for the project are stored. As the size of
+    the projects you create grows, you may use additional folders within the main project folder
+    to organize your code.
+    A relative path is a filename that shows the path to a local file (a file on the same website,
+    such as ./index.html) versus an absolute path (a full URL, like https://www.google.com which
+    is stored in a different folder). The ./ in ./index.html tells the browser to look for the
+    file in the current folder.
+
+    Linking At Will
+
+    Text-only links, however, would significantly decrease your flexibility as a web developer.
+    Thankfully, HTML allows you to turn nearly any element into a link by wrapping that element
+    with an anchor element. With this technique, it’s possible to turn images into links by
+    simply wrapping the <img> element with an <a></a> element.
+
+    Linking to Same Page
+
+    When users visit our site, we want them to be able to click a link and have the page
+    automatically scroll to a specific section.
+    In order to link to a target on the same page, we must give the target an id attribute and a
+    unique value.
+    An id should be descriptive to make it easier to remember the purpose of a link. The target
+    link is a string containing the # character and the target's element's id.
+
+    Whitespace
+
+    As the code in an HTML file grows, it becomes increasingly difficult to keep track of how
+    elements are related. Programmers use two tools to visualize the relationship between elements:
+    whitespace and indentation.
+    Both tools take advantage of the fact that hte position of elements in a browser is
+    independent of the amount of whitespace or indentation in the html file.
+    For example, if you wanted to increase the space between two paragraphs on your web page, you
+    would not be able to accomplish this by adding space between the paragraph elements in the html
+    file. The browser ignores whitespace in HTML files when it renders a web page, so it can be
+    used as a tool to make code easier to read and follow.
+
+    Indentation
+
+    The second tool web developers use to make the structure of code easier to read is indentation.
+    The spaces are inserted using the space and tab bars on the keyboard.
+    The World Wide Web Consortium, or W3C, is responsible for maintaining the style standards of
+    HTML. At the time of writing, the W3C recommends 2 spaces of indentation when writing HTML
+    code. Although your code will work without exactly two spaces, this standard is followed by
+    the majority of professional web developers. Indentation is used to easily visualize which 
+    elements are nested within other elements.
+
+    Comments
+
+    HTML files also allow you to add comments to your code.
+    Comments begin with <!-- and end with -->
+    <!--Any characters in between will be ignored by
+    your browser.
+    Including comments in your code is helpful for many reasons:
+    1. They help you (and others) understand your code if you decide to come back and review it at
+    a much later date.
+    2. They allow you to experiment with new code, without having to delete old code.
+
+    HTML Tags Review
+
+    1. The <!DOCTYPE html> declaration should always be the first line of code in your HTML files.
+    This lets the browser know what version of HTML to expect.
+    2. The <html></html> element will contain all of your HTML code.
+    3. Information about the web page, like the title, belongs within the <head></head> of the
+    page.
+    4. You can add a title to your web page by using the <title></title> element, inside of the
+    head.
+    5. A webpage's title appears in a browser's tab.
+    6. Anchor tags (<a></a>) are used to link to internal pages, external pages or content on the
+    same page.
+    7. You can create sections on a webpage and jump to them using <a></a> tags and adding ids to
+    the elements you wish to jump to.
+    8. Whitespace between HTML elements helps make code easier to read while not changing how
+    elements appear in the browser.
+    9. Indentation also helps make code easier to read. It makes parent-child relationships 
+    visible.
+    10. Comments are written in HTML using the following syntax:
+    <!--comment-->
+    <!--
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown Bears</title>
+</head>
+<body>
+    <a href="./index.html">Brown Bear</a>
+    <a href="./aboutme.html">About Me</a>
+    <h1>The Brown Bear</h1>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#habitat">Habitat</a></li>
+        <li><a href="#media">Media</a></li>
+    </ul>
+    <div id="introduction">
+        <h2>About Brown Bears</h2>
+        <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
+            Atlas bear and the Himalayan brown bear.</p>
+        <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
+        <h3>Species</h3>
+        <ul>
+            <li>Arctos</li>
+            <li>Collarus</li>
+            <li>Horribilis</li>
+            <li>Nelsoni (extinct)</li>
+        </ul>
+        <h3>Features</h3>
+        <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+        <h2>Habitat</h2>
+        <h3>Countries with Large Brown Bear Populations</h3>
+        <ol>
+            <li>Russia</li>
+            <li>United States</li>
+            <li>Canada</li>
+        </ol>
+        <h3>Countries with Small Brown Bear Populations</h3>
+        <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+        <h2>Media</h2>
+        <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"><img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg"/></a>
+        <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls>Video not supported</video>
+    </div>
+</body>
+</html>
